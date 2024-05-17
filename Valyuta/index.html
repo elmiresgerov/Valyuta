@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="bank logo" />
+      <nav>
+        <p>BANK</p>
+        <p>BİZNES</p>
+        <p>İNVESTİSİYA</p>
+        <p>SIĞORTA</p>
+        <p>MOBİL</p>
+        <p>SƏFƏRLƏR</p>
+        <p>ƏYLƏNCƏ</p>
+      </nav>
+      <button>GİRİŞ</button>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Onlayn valyuta çeviricisi</h1>
+        <div class="converters">
+          <div class="converter">
+            <div class="info">
+              <p>Mənim varımdır</p>
+            </div>
+
+            <div class="currency-first">
+              <button class="right-rub">RUB</button>
+              <button class="right-usd">USD</button>
+              <button class="right-eur">EUR</button>
+              <button class="right-try">TRY</button>
+            </div>
+
+            <div class="input">
+              <input
+                type="number"
+                onkeydown="return event.keyCode !==69"
+                onkeypress="return event.keyCode === 8 ||  event.charCode <= 57"
+                id="amount-one"
+              />
+              <p class="rate"></p>
+            </div>
+          </div>
+          <div class="converter">
+            <div class="info">
+              <p>Almaq istəyirəm</p>
+            </div>
+            <div class="currency-second">
+              <button class="left-rub">RUB</button>
+              <button class="left-usd">USD</button>
+              <button class="left-eur">EUR</button>
+              <button class="left-try">TRY</button>
+            </div>
+            <div class="input">
+              <input
+                type="number"
+                onkeydown="return event.keyCode !==69"
+                onkeypress="return event.keyCode === 8 ||  event.charCode <= 57"
+                id="amount-two"
+              />
+              <p class="rate2"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="error-message"></div>
+  </body>
+</html>
